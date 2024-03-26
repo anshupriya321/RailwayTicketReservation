@@ -1,0 +1,47 @@
+﻿@model IEnumerable<RailwayTicketReservation.Models.Data.Schedule>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ticket Booking Status</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <style>
+        .mydiv {
+            height: fit-content;
+            width: fit-content;
+            border: 1px outset lightblue;
+            border-radius: 28px;
+            padding: 5px;
+            /*  background-color: lightgray; */
+        }
+    </style>
+
+</head>
+<body>
+    <h2>Ticket  Booking Status</h2>
+    @{
+        var data = ViewBag.Message;
+    }
+    <div class="container">
+        <div class="mydiv">
+
+
+
+            <h6>Train_No: @data.Train_No</h6>
+
+
+            <h6>Train_Name: @data.Train_Name</h6>
+           
+            <h6>Time: @data.Time</h6>
+           
+            <a type="" class="btn btn-primary btn-block" asp-action="payment" asp-controller="Home">Confirm And Continue</a>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
